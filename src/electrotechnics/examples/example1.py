@@ -61,7 +61,8 @@ edges = [
 # num_nodes = 4
 zth = z_th_circuit(edges, a=1, b=0)
 
-print(f"f0 = {f0} Hz")
+print(f"Thevenin Impedance Z_th between node 1 and ground (node 0):")
+print(f"Complex Z_th = {zth} Ohm")
 print(f"Magnitude |Z_th| = {abs(zth)} Ohm")
 print(f"Phase ∠Z_th = {np.angle(zth, deg=True)} deg")
 
