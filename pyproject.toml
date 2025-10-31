@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "electrotechnics"
+version = "1.0"
+author = "Dr. Ing. Ariel S. Loyarte"
+authors = [
+  { name="Dr. Ing. Ariel S. Loyarte", email="aloyarte@frsf.utn.edu.ar" },
+]
+description = "A library for basic electrotechnical calculations"
+readme = "README.md"
+requires-python = ">=3.10,<=3.14"
+dependencies = [
+  "numpy>=1.26.4",
+  "matplotlib>=3.9.0",
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+keywords = ["electrical engineering", "simulation", "circuits", "electrotechnics"]
+license = {text = "MIT"}
+
+[project.urls]
+"Homepage" = "https://github.com/aloytag/electrotechnics"
+"Bug Tracker" = "https://github.com/aloytag/electrotechnics/issues"
+"Repository" = "https://github.com/aloytag/electrotechnics"

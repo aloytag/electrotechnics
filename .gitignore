@@ -1,0 +1,7 @@
+dist/
+test/
+changelog.txt
+*.pyc
+__pycache__/
+.vscode/
+.env
