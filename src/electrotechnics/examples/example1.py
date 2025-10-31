@@ -62,8 +62,8 @@ edges = [
 zth = z_th_circuit(edges, a=1, b=0)
 
 print(f"f0 = {f0} Hz")
-print(f"Magnitud |Z_th| = {abs(zth)}")
-print(f"Fase ∠Z_th [deg] = {np.angle(zth, deg=True)}")
+print(f"Magnitude |Z_th| = {abs(zth)} Ohm")
+print(f"Phase ∠Z_th = {np.angle(zth, deg=True)} deg")
 
 # -----------------------------
 # Frequency sweep and plotting
