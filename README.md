@@ -127,16 +127,21 @@ source_currents = solution['voltage_source_currents']  # Currents through voltag
 export_report_to_excel(report_data, 'circuit_solution.xlsx')
 
 # Example 3: Create a phasor diagram
-from electrotechnics.plotting import plot_phasors_from_solution
+from electrotechnics.plotting import phasor_plot
 
 # After solving the circuit with solve_circuit(), plot phasors:
-plot_out = plot_phasors_from_solution(
+plot_out = phasor_plot(
     solution,
     currents=[0, 1],          # Plot currents from branches 0 and 1
     voltages=[(1, 0), (2, 0)],  # Plot voltage differences
+    voltage_sources=voltage_sources,
+    current_sources=current_sources,
     reference=(1, 0),         # Use V1-0 as angle reference
-    separate_scales=True      # Independent scaling for V/I
-)
+    separate_scales=True,      # Independent scaling for V/I
+    hide_axes=True,
+    show_grid=False,
+    title='Phasor diagram'
+    )
 ```
 
 ## License
