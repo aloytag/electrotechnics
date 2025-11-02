@@ -68,7 +68,7 @@ from electrotechnics.examples import example1
 
 - Python 3.8+
 - numpy
-- matplotlib (only required for the example plotting)
+- matplotlib (for phasor diagrams)
 - pandas (for report generation)
 - openpyxl (for Excel export)
 
