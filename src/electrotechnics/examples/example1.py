@@ -58,7 +58,6 @@ edges = [
     (2, 3, R4),   # R4 2-3
 ]
 
-# num_nodes = 4
 zth = z_th_circuit(edges, a=1, b=0)
 
 print(f"Thevenin Impedance Z_th between node 1 and ground (node 0):")
