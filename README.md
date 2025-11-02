@@ -6,6 +6,7 @@ This repository provides utilities for:
 - Building and solving linear circuits with passive elements, voltage and current sources
 - Computing Thevenin equivalent impedances between nodes
 - Generating detailed reports including voltages, currents, and power analysis
+- Interactive phasor diagrams for voltage and current visualization
 - Example scripts for frequency response and power flow analysis
 
 ## Features
@@ -19,6 +20,11 @@ Circuit Analysis:
   - Ground node selection
 - Compute node voltages and branch currents
 - Power flow analysis (complex power delivered/absorbed)
+- Interactive phasor diagrams with:
+  - Voltage and current phasors with magnitude/phase tooltips
+  - Independent voltage/current scaling
+  - Configurable reference angles
+  - Toggle controls for visibility
 
 Thevenin Analysis:
 - Build nodal Laplacian (admittance) matrices from edge lists (impedance or admittance input).
@@ -119,6 +125,18 @@ source_currents = solution['voltage_source_currents']  # Currents through voltag
 
 # Export report to Excel
 export_report_to_excel(report_data, 'circuit_solution.xlsx')
+
+# Example 3: Create a phasor diagram
+from electrotechnics.plotting import plot_phasors_from_solution
+
+# After solving the circuit with solve_circuit(), plot phasors:
+plot_out = plot_phasors_from_solution(
+    solution,
+    currents=[0, 1],          # Plot currents from branches 0 and 1
+    voltages=[(1, 0), (2, 0)],  # Plot voltage differences
+    reference=(1, 0),         # Use V1-0 as angle reference
+    separate_scales=True      # Independent scaling for V/I
+)
 ```
 
 ## License
